@@ -1,5 +1,7 @@
 ## Micronaut 4.0.0 Documentation
 
+ A sample of gRPC Project.
+
 - [User Guide](https://docs.micronaut.io/4.0.0/guide/index.html)
 - [API Reference](https://docs.micronaut.io/4.0.0/api/index.html)
 - [Configuration Reference](https://docs.micronaut.io/4.0.0/guide/configurationreference.html)
