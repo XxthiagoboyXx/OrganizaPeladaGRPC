@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true; //each class in a new build file
+option java_package = "com.grpc.auba";
+option java_outer_classname = "OrganizaPeladaOuterClass"; //class metadata | if (java_multiple_files == false) then all class will be here
+option objc_class_prefix = "HLW"; //Compatible with IOS
+
+package com.grpc.auba; //namespace
+
+service OrganizaPeladaService {
+  rpc register(CreateMatchDayRequest) returns (CreateMatchDayResponse) {}
+}
+
+enum Skill {
+  FOUR_STARS = 0; //HERE ARE THE MOST COMMON | + PERFORMANCE | Start at 0
+  FIVE_STARS = 1;
+  THREE_STARS = 2; //Change to 3? XXX
+}
+
+message Player {
+  string name = 1;
+  Skill skill = 2;
+}
+
+message Team {
+  repeated Player players = 1;
+}
+
+message CreateMatchDayRequest {
+  google.protobuf.Timestamp time = 1;
+  repeated Player players = 2;
+}
+
+message CreateMatchDayResponse {
+  string status = 1;
+  optional string match_id = 2;
+  repeated Team teams = 3; //Change to Optional var XXX
+}
