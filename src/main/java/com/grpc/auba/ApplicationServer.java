@@ -78,8 +78,6 @@ class CreateMatchDayEndpoint extends OrganizaPeladaServiceGrpc.OrganizaPeladaSer
         teams.clear();
         teams.addAll(tempTeams);
 
-        //logic here
-
         //Create a Response
         CreateMatchDayResponse response = CreateMatchDayResponse.newBuilder()
                 .setStatus("Match day successfully created")
