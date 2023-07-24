@@ -12,7 +12,7 @@ public class ApplicationClient {
     public static void main(String[] args) {
 
         //Create a communication channel with the gRPC Server
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 50051)
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("127.0.0.1", 50051)
                 .usePlaintext()
                 .build();
 
@@ -36,7 +36,7 @@ public class ApplicationClient {
                 .addPlayers(Player.newBuilder().setName("Aguero").setSkill(Skill.FOUR_STARS).build())
                 .addPlayers(Player.newBuilder().setName("Lamine Yamal").setSkill(Skill.THREE_STARS).build())
                 .addPlayers(Player.newBuilder().setName("Neymar").setSkill(Skill.FIVE_STARS).build())
-                .addPlayers(Player.newBuilder().setName("Modric").setSkill(Skill.FOUR_STARS).build())
+                .addPlayers(Player.newBuilder().setName("Modric").setSkill(Skill.FIVE_STARS).build())
                 .addPlayers(Player.newBuilder().setName("Sergi Roberto").setSkill(Skill.THREE_STARS).build())
                 .addPlayers(Player.newBuilder().setName("Semedo").setSkill(Skill.THREE_STARS).build())
                 .addPlayers(Player.newBuilder().setName("Salah").setSkill(Skill.FOUR_STARS).build())
